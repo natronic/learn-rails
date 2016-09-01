@@ -1,11 +1,11 @@
 class Owner
 
   def name
-    name = 'Foobar Kadigan'
+    name = 'Nate Roise'
   end
 
   def birthdate
-    birthdate = Date.new(1990, 12, 22)
+    birthdate = Date.new(1974, 9, 17)
   end
 
   def countdown
@@ -16,6 +16,12 @@ class Owner
     else
       countdown = (birthday.next_year - today).to_i
     end
+  end
+
+  def age
+    today = Date.today
+    bday = Date.new(today.year, birthdate.month, birthdate.day)
+    age = ((bday - birthdate).to_i/365)
   end
 
 end
